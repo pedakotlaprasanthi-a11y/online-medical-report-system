@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+  <h3>Create Account</h3>
+  <form method="post">
+    <label>Username</label><input name="username" required>
+    <label>Password</label><input type="password" name="password" required>
+    <button type="submit">Register</button>
+  </form>
+  <p>Already registered? <a href="{{ url_for('login') }}">Login</a></p>
+</section>
+{% endblock %}

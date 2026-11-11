@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+.git/
+medical_reports.db
+uploads/
