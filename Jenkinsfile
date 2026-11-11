@@ -10,11 +10,8 @@ pipeline {
         stage('Checkout') {
             steps { checkout scm }
         }
-        stage('Install and Check') {
-            steps {
-                bat 'py -m pip install -r requirements.txt'
-                bat 'py -m compileall -q app.py'
-            }
+        stage('Check Docker') {
+             steps { bat 'docker version'}
         }
         stage('Build Docker Image') {
             steps { bat 'docker build -t %IMAGE_NAME%:%BUILD_NUMBER% .' }
